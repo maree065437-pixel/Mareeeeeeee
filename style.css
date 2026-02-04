@@ -1,0 +1,349 @@
+:root {
+    --navy: #0F172A;
+    --blue: #2563EB;
+    --text-main: #334155;
+    --bg-light: #FAFAFA;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-main);
+    line-height: 1.7;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.top-nav {
+    background: var(--white);
+    padding: 20px 0;
+    border-bottom: 1px solid #E2E8F0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.top-nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--navy);
+    letter-spacing: -0.5px;
+}
+
+.logo span { color: var(--blue); }
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: 0.2s;
+}
+
+.nav-menu a:hover, .nav-menu a.active { color: var(--blue); }
+
+.btn-primary {
+    background: var(--blue);
+    color: var(--white) !important;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600 !important;
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 80px 0;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.sub-heading {
+    color: var(--blue);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    color: var(--navy);
+    line-height: 1.2;
+    margin: 15px 0 25px;
+}
+
+.hero-text h1 span { color: var(--blue); }
+
+.hero-image img {
+    width: 100%;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.clinic-badge {
+    display: flex;
+    gap: 15px;
+    margin-top: 40px;
+    background: var(--white);
+    padding: 20px;
+    border-radius: 15px;
+    width: fit-content;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+/* The 5 Button Menu Grid */
+.quick-access {
+    padding-bottom: 80px;
+}
+
+.grid-5 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.menu-card {
+    background: var(--white);
+    border: 1px solid #E2E8F0;
+    padding: 30px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.menu-card:hover {
+    border-color: var(--blue);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.1);
+}
+
+.menu-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: var(--navy);
+}
+
+.menu-card p {
+    font-size: 0.85rem;
+    color: var(--text-main);
+    opacity: 0.7;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .hero-grid { grid-template-columns: 1fr; text-align: center; }
+    .grid-5 { grid-template-columns: 1fr 1fr; }
+    .clinic-badge { margin: 40px auto; }
+}
+/* Layout Helpers */
+.py-80 { padding: 80px 0; }
+.section-header { text-align: center; margin-bottom: 50px; }
+.blue { color: var(--blue); }
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.service-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+/* Doctors List */
+.doctors-list {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+.doctor-card {
+    background: white;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    text-align: center;
+}
+.doctor-card img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* Forms */
+.portal-box, .main-form {
+    max-width: 500px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+}
+input, select {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #E2E8F0;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.contact-flex {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: center;
+}
+/* Professional UI Tweaks */
+.py-120 { padding: 120px 0; }
+.mb-80 { margin-bottom: 80px; }
+.text-center { text-align: center; }
+
+.display-title {
+    font-size: 3rem;
+    color: var(--navy);
+    letter-spacing: -1.5px;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Glass & Card Design */
+.glass-card {
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+    transition: transform 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-10px);
+}
+
+.card-img img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.card-body { padding: 30px; }
+
+.text-link {
+    color: var(--blue);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+/* Professional Profile Cards */
+.doctors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.profile-card {
+    background: white;
+    border-radius: 24px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #f1f5f9;
+}
+
+.profile-card img {
+    width: 100%;
+    height: 300px;
+    border-radius: 16px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.specialty {
+    color: var(--blue);
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
+/* Form Styling */
+.pro-form {
+    background: white;
+    padding: 50px;
+    border-radius: 32px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.08);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.btn-primary-wide {
+    width: 100%;
+    background: var(--blue);
+    color: white;
+    border: none;
+    padding: 18px;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-primary-wide:hover {
+    background: var(--navy);
+}
+
+.split-view {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: center;
+}
